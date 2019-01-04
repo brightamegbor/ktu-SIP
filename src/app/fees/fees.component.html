@@ -1,0 +1,45 @@
+<mat-list class="mat-header-01"></mat-list>
+<mat-tab-group color="accent" backgroundColor="primary">
+	<mat-tab label="BILL">
+		<h4 class="text-align-center">Fees for 2018/2019 Academic year | Morning</h4>
+
+		<table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+		  <!-- Item Column -->
+		  <ng-container matColumnDef="item">
+		    <th mat-header-cell *matHeaderCellDef> Programme </th>
+		    <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
+		    <td mat-footer-cell *matFooterCellDef> Total </td>
+		  </ng-container>
+
+		  <!-- Cost Column -->
+		  <ng-container matColumnDef="cost">
+		    <th mat-header-cell *matHeaderCellDef> Amount (GHS) </th>
+		    <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency: "&#8373;" }} </td>
+		    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency: "&#8373;" }} </td>
+		  </ng-container>
+
+		  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		  <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+		</table>
+
+		<div class="align-well">
+			<div class="text-align-center">
+				<h4></h4>
+				<p>Pay online below! Using Mobile Money</p>
+				<button mat-raised-button color="primary">Pay Now!</button>
+
+				<p>OR</p>
+				<p>Pay only at the following banks</p>
+				<img class="banks-image" src="assets/img/agricbank.png" alt="ADB">
+				<img class="banks-image" src="assets/img/Universal-Merchant.png" alt="UMB">
+				<img class="banks-image" src="assets/img/fidelity-bank.png" alt="Fidelity">
+				<img class="banks-image" src="assets/img/GCB.png" alt="GCB">
+			</div>
+		</div>
+
+	</mat-tab>
+	<mat-tab label="TRANSACTION">
+		
+	</mat-tab>
+</mat-tab-group>

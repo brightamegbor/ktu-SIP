@@ -1,0 +1,54 @@
+<mat-list class="mat-header-01"></mat-list>
+<mat-tab-group color="accent" backgroundColor="primary">
+	<mat-tab label="Register">
+		<h4 class="text-align-center">Courses for this Semester</h4>
+
+
+		<mat-horizontal-stepper linear #stepper>
+		  <mat-step>
+		  	<ng-template matStepLabel>Add Courses</ng-template>
+		    
+		    <mat-selection-list #courses (selectionChange)="onSelection($event, courses.selectedOptions)" >
+			  <mat-list-option *ngFor="let course of typesOfCourses" [value]="course.name">
+			    {{course.name}}
+			  </mat-list-option>
+			</mat-selection-list>
+
+			<p>
+			  Courses selected: {{courses.selectedOptions.selected.length}}
+			</p>
+
+		    <div>
+		      <button mat-raised-button matStepperNext color="primary">Next</button>
+		    </div>
+		  </mat-step>
+
+		  <mat-step>
+		  	<ng-template matStepLabel>Confirm Courses</ng-template>
+		    <h5>Kindly go through your selected courses below</h5>
+
+		    <ol>
+		    	<li *ngFor="let i of courses.selectedOptions.selected">
+		    		{{ i.value }}
+		    	</li>
+		    </ol>
+
+		    <p class="smaller">Hint: You can drop any course by going back and untick it</p>
+		    <div>
+		      <button mat-raised-button matStepperPrevious>Back</button>
+		    </div>
+
+		    <div class="text-align-center">
+		      <button mat-raised-button matStepperNext color="primary">Submit</button>
+		    </div>
+		  </mat-step>
+  			
+		</mat-horizontal-stepper>
+
+
+	</mat-tab>
+
+	<mat-tab label="History">
+		
+	</mat-tab>
+</mat-tab-group>

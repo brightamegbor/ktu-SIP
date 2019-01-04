@@ -1,0 +1,36 @@
+.mat-header-01 {
+	background-color: #3F51B5;
+	padding-top: 55px;
+	border: 0;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+	min-width: 45% !important;
+	padding: 3px !important;
+	margin: 3px !important;
+}
+
+table {
+  margin: 10px;
+  width: 95%;
+}
+
+tr.mat-footer-row, th.mat-header-cell {
+  font-weight: bold;
+  color: #757575;
+}
+
+.align-well {
+	margin: 10px;
+}
+
+.banks-image {
+	padding: 1px;
+	width: 95px;
+	height: 50px;
+
+}

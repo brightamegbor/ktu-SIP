@@ -1,0 +1,21 @@
+.mat-header-01 {
+	background-color: #3F51B5;
+	padding-top: 55px;
+	border: 0;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+	min-width: 45% !important;
+	padding: 3px !important;
+	margin: 3px !important;
+}
+
+.smaller {
+
+	font-size: 11px;
+	font-weight: 400;
+}
