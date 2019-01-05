@@ -19,3 +19,11 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.icon-v {
+	margin-top: 2px;
+	position: absolute;
+}
+.aligned-well {
+	margin-left: 10px;
+}

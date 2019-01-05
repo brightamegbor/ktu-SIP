@@ -5,11 +5,25 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>User account</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard">Dashboard</a>
-      <a mat-list-item routerLink="/fees">Fees</a>
-      <a mat-list-item routerLink="/registration">Course Registration</a>
-      <a mat-list-item routerLink="/account">Personal Account</a>
-      <a mat-list-item routerLink="/results">Published Results</a>
+      <a mat-list-item routerLink="/dashboard">
+        <mat-icon >dashboard</mat-icon>
+        Dashboard</a>
+      <a mat-list-item routerLink="/fees">
+        <mat-icon >monetization_on</mat-icon>
+        Fees
+      </a>
+      <a mat-list-item routerLink="/registration">
+        <mat-icon >mode_edit</mat-icon>
+        Course Registration
+      </a>
+      <a mat-list-item routerLink="/account">
+        <mat-icon >receipt</mat-icon>
+        Personal Account
+      </a>
+      <a mat-list-item routerLink="/results">
+        <mat-icon >font_download</mat-icon>
+        Published Results
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,9 +36,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>{{ title }}</span>
+      <span>.</span>
       <span class="spacer"></span>
-      <a mat-button routerLink="#">User</a>
+      <a mat-button routerLink="/profile"><mat-icon>
+        account_circle
+      </mat-icon></a>
     </mat-toolbar>
     <!-- Add Content Here -->
 

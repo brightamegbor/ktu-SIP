@@ -19,3 +19,19 @@
 	font-size: 11px;
 	font-weight: 400;
 }
+
+.put-center {
+	display: inline-block;
+}
+
+.align-center {
+	width: 200px; 
+	margin: 0 auto;
+}
+
+/*::ng-deep .mat-icon {
+	height: 98px !important;
+	width: 98px !important;
+	font-size: 98px !important;
+
+}*/

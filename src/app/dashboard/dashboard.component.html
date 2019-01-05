@@ -9,10 +9,10 @@
 	  <mat-grid-tile>
 	  	<mat-list>
   			<mat-list-item>
-  				<a href="#"><img class="svgico" src="assets/img/svg/usericon.png" alt="image"></a>
+  				<a routerLink="/profile"><img class="svgico" src="assets/img/svg/usericon.png" alt="image"></a>
   			</mat-list-item>
   			<mat-list-item>
-  				<a href="#"> Profile </a>
+  				<a routerLink="/profile"> Profile </a>
   			</mat-list-item>
 		</mat-list>
 	  	
@@ -21,12 +21,12 @@
 	  <mat-grid-tile>
 	  	<mat-list>
 	  		<mat-list-item>
-  				<a href="#">
+  				<a routerLink="/registration">
   					<img class="svgico" src="assets/img/svg/register.png" alt="image">
   				</a>
   			</mat-list-item>
   			<mat-list-item>
-  				<a href="#"> Registration </a>
+  				<a routerLink="/registration"> Registration </a>
   			</mat-list-item>
 		</mat-list>
 	  </mat-grid-tile>
@@ -34,12 +34,12 @@
 	  <mat-grid-tile>
 	  	<mat-list>
 	  		<mat-list-item>
-  				<a href="#">
+  				<a routerLink="/account">
   					<img class="svgico" src="assets/img/svg/money.png" alt="image">
   				</a>
   			</mat-list-item>
   			<mat-list-item>
-  				<a href="#"> Accounts </a>
+  				<a routerLink="/account"> Accounts </a>
   			</mat-list-item>
 		</mat-list>
 	  </mat-grid-tile>
@@ -73,12 +73,12 @@
 	  <mat-grid-tile>
 	  	<mat-list>
 	  		<mat-list-item>
-  				<a href="#">
+  				<a routerLink="/results">
   					<img class="svgico" src="assets/img/svg/results.png" alt="image">
   				</a>
   			</mat-list-item>
   			<mat-list-item>
-  				<a href="#"> Results </a>
+  				<a routerLink="/results"> Results </a>
   			</mat-list-item>
 		</mat-list>
 	  </mat-grid-tile>
@@ -102,3 +102,5 @@
 		</mat-list>
 	</mat-card-content>
 </mat-card>
+
+<router-outlet></router-outlet>

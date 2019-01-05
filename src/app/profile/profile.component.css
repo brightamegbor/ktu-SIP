@@ -1,0 +1,39 @@
+.mat-header-01 {
+	background-color: #3F51B5;
+	padding-bottom: 55px;
+	border: 0;
+	color: #fff;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+	min-width: 45% !important;
+	padding: 3px !important;
+	margin: 3px !important;
+}
+
+.align-well {
+	margin: 10px;
+}
+
+.align-well-more {
+	margin: 5px 40px;
+}
+
+.mat-divider {
+	margin: 0 40px;
+}
+
+.icon-v {
+	margin-left: 5px;
+	margin-top: 10px;
+	position: absolute;
+}
+
+.put-center {
+	width: 100px;
+	margin: 0 auto;
+}

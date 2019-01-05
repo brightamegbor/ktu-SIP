@@ -44,6 +44,7 @@ import { FeesComponent } from './fees/fees.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AccountComponent } from './account/account.component';
 import { ResultsComponent } from './results/results.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ResultsComponent } from './results/results.component';
     FeesComponent,
     RegistrationComponent,
     AccountComponent,
-    ResultsComponent
+    ResultsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +101,7 @@ import { ResultsComponent } from './results/results.component';
         { path: 'registration', component: RegistrationComponent },
         { path: 'account', component: AccountComponent },
         { path: 'results', component: ResultsComponent },
+        { path: 'profile', component: ProfileComponent },
     ])
   ],
   providers: [],
