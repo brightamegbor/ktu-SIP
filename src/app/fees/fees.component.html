@@ -6,16 +6,16 @@
 		<table mat-table [dataSource]="transactions" class="mat-elevation-z8">
 		  <!-- Item Column -->
 		  <ng-container matColumnDef="item">
-		    <th mat-header-cell *matHeaderCellDef> Programme </th>
-		    <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
-		    <td mat-footer-cell *matFooterCellDef> Total </td>
+		    <th mat-header-cell *matHeaderCellDef style="text-align: left;"> Programme </th>
+		    <td mat-cell *matCellDef="let transaction" style="text-align: left;"> {{transaction.item}} </td>
+		    <td mat-footer-cell *matFooterCellDef style="text-align: left;"> Total </td>
 		  </ng-container>
 
 		  <!-- Cost Column -->
 		  <ng-container matColumnDef="cost">
-		    <th mat-header-cell *matHeaderCellDef> Amount (GHS) </th>
-		    <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency: "&#8373;" }} </td>
-		    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency: "&#8373;" }} </td>
+		    <th mat-header-cell *matHeaderCellDef style="text-align: right;"> Amount (GHS) </th>
+		    <td mat-cell *matCellDef="let transaction" style="text-align: right;"> {{transaction.cost | currency: "&#8373;" }} </td>
+		    <td mat-footer-cell *matFooterCellDef style="text-align: right;"> {{getTotalCost() | currency: "&#8373;" }} </td>
 		  </ng-container>
 
 		  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -42,10 +42,6 @@
 	<mat-tab label="TRANSACTION">
 		<h4 class="text-align-center">Review the details of your transactions below</h4>
 
-		<table>
-			<ng-container>
-				<th> Amount (GHS) </th>
-			</ng-container>
-		</table>
+		<app-account-table></app-account-table>
 	</mat-tab>
 </mat-tab-group>

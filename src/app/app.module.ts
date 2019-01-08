@@ -45,6 +45,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AccountComponent } from './account/account.component';
 import { ResultsComponent } from './results/results.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AccountTableComponent } from './account-table/account-table.component';
+import { ResultTableComponent } from './result-table/result-table.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { ProfileComponent } from './profile/profile.component';
     RegistrationComponent,
     AccountComponent,
     ResultsComponent,
-    ProfileComponent
+    ProfileComponent,
+    AccountTableComponent,
+    ResultTableComponent
   ],
   imports: [
     BrowserModule,

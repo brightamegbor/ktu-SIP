@@ -5,13 +5,6 @@ export interface Transaction {
   cost: number;
 }
 
-export interface History {
-  date: string;
-  details: string;
-  amount: number;
-  balance: number;
-}
-
 
 @Component({
   selector: 'app-fees',
@@ -29,11 +22,7 @@ export class FeesComponent implements OnInit {
     {item: 'HND Renewable Energy', cost: 1628},
     {item: 'HND Graphic Design', cost: 1991},
   ];
-
-  displayedCol: string[] = ['date', 'details', 'amount', 'balance'];
-  historys: History[] = [
-    {date: '2018/8/14', details: 'School fees', amount: 1887, balance: 1887},
-  ];
+  
 
   /** Gets the total cost of all transactions. */
   getTotalCost() {

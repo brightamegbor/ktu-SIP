@@ -1,0 +1,48 @@
+<div class="mat-elevation-z8">
+  <div class="semester-title">{{semester}}</div>
+  <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+    
+    <!-- Id Column -->
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Code</th>
+      <td mat-cell *matCellDef="let row" class="data-font">{{row.code}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="title-c">Title</th>
+      <td mat-cell *matCellDef="let row" class="title-c data-font">{{row.details}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="marks">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Marks</th>
+      <td mat-cell *matCellDef="let row" class="data-font">{{row.marks | currency: " "}}</td>
+      <td mat-footer-cell *matFooterCellDef style="text-align: left;"> Total </td>
+    </ng-container>
+
+    <ng-container matColumnDef="grade">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Grade</th>
+      <td mat-cell *matCellDef="let row" class="data-font">{{row.grade}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="credits">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Credits</th>
+      <td mat-cell *matCellDef="let row" class="data-font">{{row.credits | currency: " "}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gp">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>GP</th>
+      <td mat-cell *matCellDef="let row" class="data-font">{{row.gp | currency: " "}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="15"
+      >
+  </mat-paginator>
+</div>

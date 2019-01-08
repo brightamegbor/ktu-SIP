@@ -1,0 +1,24 @@
+.full-width-table {
+  width: 100%;
+}
+
+.data-font {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.title-c {
+	padding: 0 7.5px;
+
+}
+
+
+
+.semester-title {
+	width: 100%;
+	padding-left: 20px;
+	background-color: #757575;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+}
