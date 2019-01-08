@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+  	apiKey: 'AIzaSyBMsLFUUYpr3ioO_EXgl8iSMdcyRhJXy5s',
+    authDomain: 'ktu-student-information-system.firebaseapp.com',
+    databaseURL: 'https://ktu-student-information-system.firebaseio.com',
+    projectId: 'ktu-student-information-system',
+    storageBucket: 'ktu-student-information-system.appspot.com',
+    messagingSenderId: '529447174681'
+  }
 };
 
 /*
